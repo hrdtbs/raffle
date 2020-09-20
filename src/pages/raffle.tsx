@@ -65,7 +65,7 @@ export default function Home() {
         justifyContent: "center",
         height: "300px",
       }}>
-        <Ticket win={!!winner} index={index} name={winner || tickets[index][0]}/>
+        <Ticket win={!!winner} index={index} name={winner || tickets?.[index]?.[0]}/>
       </div>
         <div role="button" onClick={() => {
           if(winner){
