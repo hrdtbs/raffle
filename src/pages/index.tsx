@@ -37,7 +37,7 @@ export default function Home() {
             <details key={key} open={key === groupCount.length - 1}>
               <summary>Group {key}</summary>
               <fieldset>
-                <input name="ratio" type="number" min={0} max={100} step={1} required defaultValue={0.5}/>
+                <input name="ratio" type="number" min={0} max={100} step={1} defaultValue={0.5}/>
                 <textarea name="texts" cols={30} rows={10}></textarea>
               </fieldset>
             </details>
