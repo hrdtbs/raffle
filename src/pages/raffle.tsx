@@ -6,6 +6,8 @@ const removeEmojis = (string: string) => {
   return string.replace(regex, '');
 }
 
+const timestamp = new Date().toLocaleDateString('en-US', { weekday: "short", year: 'numeric', month: 'short', day: 'numeric' })
+
 
 const Ticket = ({index, win, name, small}: {index: number, win?: boolean, name?: string, small?: boolean}) => {
   const [screenname, username] = removeEmojis(name || "").split(",")
@@ -24,7 +26,7 @@ const Ticket = ({index, win, name, small}: {index: number, win?: boolean, name?:
           ): (
             <h4 className="username">{username}</h4>
           )}
-          <p className="timestamp">{new Date().toLocaleDateString('en-US', { weekday: "short", year: 'numeric', month: 'short', day: 'numeric', hour: "numeric", minute: "numeric", second: "numeric" })}</p>
+          <p className="timestamp">{timestamp}</p>
         </div>
         <div className="stamp">
           <div className={`stampinner ${win ? "ok" : ""}`}>
