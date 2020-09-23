@@ -48,10 +48,20 @@
         padding-right: 16px;
         height: 100%;
         transform: translate(0px,-50px);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+        .username{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 200px;
+        }
+        .screenname{
+            font-size: 10px;
+        }
         .timestamp{
             color: gray;
             font-size: 10px;
